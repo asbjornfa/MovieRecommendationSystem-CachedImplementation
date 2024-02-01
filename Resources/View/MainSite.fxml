@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="1306.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MainSiteController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets left="30.0" right="30.0" />
+            </padding>
+            <children>
+                <ImageView fitHeight="70.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/movieLogo.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#14b580" strokeType="OUTSIDE" strokeWidth="0.0" text="MovieCollection">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Text>
+                <Line endX="-100.62132263183594" endY="-71.3062973022461" startX="-100.0">
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Line>
+                <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="73.0" prefWidth="479.0">
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                    <children>
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Pane prefHeight="73.0" prefWidth="30.0" />
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Movies">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Pane prefHeight="73.0" prefWidth="30.0" />
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="TV Shows">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Pane prefHeight="73.0" prefWidth="30.0" />
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="My list">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Pane prefHeight="73.0" prefWidth="30.0" />
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <Pane prefHeight="200.0" prefWidth="200.0" />
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Asbjørn">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Pane prefHeight="100.0" prefWidth="30.0" />
+                        <ImageView fitHeight="70.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/movieCollectionAvatar.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                    <content>
+                        <GridPane fx:id="videoGridOne">
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+                <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                    <content>
+                        <GridPane fx:id="videoGridTwo">
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
