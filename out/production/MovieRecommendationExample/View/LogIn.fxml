@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="439.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="439.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
    <top>
       <AnchorPane BorderPane.alignment="CENTER" />
    </top>
@@ -46,7 +46,7 @@
                   </TextField>
                </children>
             </HBox>
-            <Button layoutX="182.0" layoutY="267.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" style="-fx-background-radius: 50; -fx-background-color: #2cab93;" text="Login">
+            <Button layoutX="182.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleLogIn" prefHeight="26.0" prefWidth="96.0" style="-fx-background-radius: 50; -fx-background-color: #2cab93;" text="Login">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
