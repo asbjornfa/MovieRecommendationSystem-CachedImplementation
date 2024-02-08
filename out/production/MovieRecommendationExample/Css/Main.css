@@ -1,0 +1,36 @@
+
+
+/* Background */
+#MainBorderPane {
+-fx-background-color: #282828 ;
+}
+
+/* Company name */
+#lblMovieCollection {
+    -fx-text-fill: #2BAC95;
+}
+
+/* Category labels */
+#lblHome, #lblMovies, #lblTVShows, #lblMyList, #lblSearch {
+    -fx-text-fill: white;
+}
+
+/* Category labels while hovering  */
+#lblHome:hover, #lblMovies:hover, #lblTVShows:hover, #lblMyList:hover, #lblSearch:hover {
+    -fx-text-fill: #2BAC95;
+}
+
+/* Make ScrollPane transparent */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+/* Make Scroll-bar transparent */
+.scroll-pane .scroll-bar {
+    -fx-opacity: 0;
+}
+
+/* Make ScrollPane background transparent */
+.viewport {
+    -fx-background-color: transparent;
+}

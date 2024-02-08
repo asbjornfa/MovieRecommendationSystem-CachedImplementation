@@ -40,7 +40,7 @@ public class LogInController implements Initializable {
         model.loginUserFromUsername(enterEmail.getText());
         if(model.getObsLoggedInUser()!=null){
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/MainSite.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/MainWindow.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));

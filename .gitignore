@@ -4,6 +4,9 @@
 # Log file
 *.log
 
+# Config
+config/config.api
+
 # BlueJ files
 *.ctxt# Created by https://www.toptal.com/developers/gitignore/api/intellij
       # Edit at https://www.toptal.com/developers/gitignore?templates=intellij
