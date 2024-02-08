@@ -18,11 +18,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LogInController implements Initializable {
-    @FXML private PasswordField passwordField;
-    @FXML private TextField userId;
+    @FXML
+    private PasswordField enterPassword;
+    @FXML
+    private TextField enterEmail;
     private AppModel model;
     @FXML
-    ImageView imageView;
+    private ImageView logoImage;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         model = new AppModel();
@@ -35,7 +37,7 @@ public class LogInController implements Initializable {
 
     public void handleLogIn(ActionEvent actionEvent) {
         model.loadUsers();
-        model.loginUserFromUsername(userId.getText());
+        model.loginUserFromUsername(enterEmail.getText());
         if(model.getObsLoggedInUser()!=null){
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/MainSite.fxml"));
@@ -60,5 +62,8 @@ public class LogInController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password");
             alert.showAndWait();
         }
+    }
+
+    public void handleCreate(ActionEvent actionEvent) {
     }
 }
