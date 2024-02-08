@@ -46,14 +46,14 @@ public class LogInController implements Initializable {
                 stage.setScene(new Scene(root));
                 stage.setTitle("Movie Recommendation System 0.01 Beta");
                 stage.show();
-                AppController controller = loader.getController();
+                //AppController controller = loader.getController();
 
-                controller.setModel(model);
+                //controller.setModel(model);
 
 
             } catch (IOException e) {
                 e.printStackTrace();
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load MainWindow.fxml");
                 alert.showAndWait();
             }
 
