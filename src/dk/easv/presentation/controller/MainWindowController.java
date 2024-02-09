@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -54,6 +55,7 @@ public class MainWindowController implements Initializable {
     @FXML
     private GridPane movieGrid;
 
+    private Node originalCenter;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -79,6 +81,8 @@ public class MainWindowController implements Initializable {
 
                 movieGrid.add(box, columns++, 1);
                 GridPane.setMargin(box, new Insets(15));
+
+                originalCenter = MainBorderPane.getCenter();
             }
     } catch (IOException | JSONException | URISyntaxException | InterruptedException e) {
         throw new RuntimeException(e);
@@ -94,8 +98,7 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private void handleClickHome(MouseEvent mouseEvent) {
-        //AnchorPane homeView = FXMLLoader.load(getClass().getResource("/View/MainWindow.fxml"))
-
+        MainBorderPane.setCenter(originalCenter);
     }
 
     @FXML
