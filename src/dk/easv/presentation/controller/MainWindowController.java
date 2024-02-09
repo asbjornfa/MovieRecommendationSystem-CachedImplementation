@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -83,6 +85,22 @@ public class MainWindowController implements Initializable {
     }
     }
 
+    @FXML
+    private void handleClickMovie(MouseEvent mouseEvent) throws IOException {
+        AnchorPane view = FXMLLoader.load(getClass().getResource("/View/MoviesView.fxml"));
+        MainBorderPane.setCenter(view);
+        System.out.println("working");
+    }
+
+    @FXML
+    private void handleClickHome(MouseEvent mouseEvent) {
+        //AnchorPane homeView = FXMLLoader.load(getClass().getResource("/View/MainWindow.fxml"))
+
+    }
+
+    @FXML
+    private void handleClickSearch(MouseEvent mouseEvent) {
+    }
 }
 
 

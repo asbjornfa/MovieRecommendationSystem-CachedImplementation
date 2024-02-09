@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="MainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../Css/Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MainWindowController">
+<BorderPane fx:id="MainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../Css/Main.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MainWindowController">
    <top>
       <AnchorPane prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
@@ -46,12 +46,12 @@
             </HBox>
             <HBox layoutX="243.0" layoutY="-1.0" prefHeight="59.0" prefWidth="306.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="5.0">
                <children>
-                  <Label fx:id="lblHome" text="Home">
+                  <Label fx:id="lblHome" onMouseClicked="#handleClickHome" text="Home">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="lblMovies" text="Movies">
+                  <Label fx:id="lblMovies" onMouseClicked="#handleClickMovie" text="Movies">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </HBox.margin>
@@ -66,7 +66,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="lblSearch" text="Search">
+                  <Label fx:id="lblSearch" onMouseClicked="#handleClickSearch" text="Search">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </HBox.margin>

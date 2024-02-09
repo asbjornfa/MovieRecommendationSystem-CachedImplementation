@@ -65,5 +65,20 @@ public class LogInController implements Initializable {
     }
 
     public void handleCreate(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/CreateAccount.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Movie Recommendation System 0.01 Beta");
+            stage.show();
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load MainWindow.fxml");
+            alert.showAndWait();
+        }
     }
 }
