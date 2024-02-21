@@ -6,12 +6,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MovieSampleController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MovieSampleController">
    <children>
-      <ImageView fx:id="moviePoster" fitHeight="243.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="lblMovieName" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="113.0" text="Name" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+      <ImageView fx:id="moviePoster" fitHeight="261.0" fitWidth="251.0" preserveRatio="true" />
+      <Label fx:id="lblMovieName" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="272.0" text="Name" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
          <VBox.margin>
             <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />

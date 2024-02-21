@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MoviesViewController">
-   <children>
-      <VBox prefHeight="530.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ScrollPane prefHeight="424.0" prefWidth="760.0">
-               <content>
-                  <GridPane fx:id="movieGridMovies">
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
-               </content>
-            </ScrollPane>
-         </children>
-      </VBox>
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../Css/Search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MoviesViewController">
+    <children>
+        <ScrollPane hbarPolicy="NEVER" layoutY="49.0" prefHeight="551.0" prefWidth="800.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+         <content>
+                  <VBox>
+                      <children>
+                          <ScrollPane>
+                              <content>
+                                  <TilePane fx:id="movieTilePane" hgap="15.0" vgap="15.0" />
+                              </content>
+                          </ScrollPane>
+                      </children>
+                  </VBox>
+         </content>
+        </ScrollPane>
+      <Label layoutX="349.0" layoutY="11.0" text="All movies" textFill="WHITE">
+         <font>
+            <Font name="Avenir Black" size="20.0" />
+         </font>
+      </Label>
+    </children>
 </AnchorPane>

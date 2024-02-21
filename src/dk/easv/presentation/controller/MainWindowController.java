@@ -91,8 +91,8 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private void handleClickMovie(MouseEvent mouseEvent) throws IOException {
-        AnchorPane view = FXMLLoader.load(getClass().getResource("/View/MoviesView.fxml"));
-        MainBorderPane.setCenter(view);
+        AnchorPane moviesView = FXMLLoader.load(getClass().getResource("/View/MoviesView.fxml"));
+        MainBorderPane.setCenter(moviesView);
         System.out.println("working");
     }
 
@@ -102,7 +102,9 @@ public class MainWindowController implements Initializable {
     }
 
     @FXML
-    private void handleClickSearch(MouseEvent mouseEvent) {
+    private void handleClickSearch(MouseEvent mouseEvent) throws IOException {
+        AnchorPane searchView = FXMLLoader.load(getClass().getResource("/View/SearchView.fxml"));
+        MainBorderPane.setCenter(searchView);
     }
 }
 
