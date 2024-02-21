@@ -15,7 +15,7 @@ import java.util.Map;
 public class DataAccessManager {
     private HashMap<Integer, User> users = new HashMap<>();
     private HashMap<Integer, Movie> movies = new HashMap<>();
-    private List<Rating> ratings = new ArrayList<>();
+    //private List<Rating> ratings = new ArrayList<>();
 
     // Loads all data from disk and stores in memory
     // For performance, data is only updated if updateCacheFromDisk() is called
@@ -27,17 +27,17 @@ public class DataAccessManager {
         return users;
     }
 
-    public Map<Integer, Movie> getAllMovies() {
+    /*public Map<Integer, Movie> getAllMovies() {
         return movies;
-    }
+    }*/
 
-    public List<Rating> getAllRatings(){
+    /*public List<Rating> getAllRatings(){
         return ratings;
-    }
+    }*/
 
 
     public void updateCacheFromDisk(){
-        loadAllRatings();
+        loadAllUsers();
     }
 
     private void loadAllMovies() {
@@ -68,7 +68,7 @@ public class DataAccessManager {
 
     // Loads all ratings, users and movies must be loaded first
     // Users holds a list of ratings and movies holds a list of ratings
-    private void loadAllRatings() {
+    /*private void loadAllRatings() {
         loadAllMovies();
         loadAllUsers();
         try {
@@ -86,7 +86,7 @@ public class DataAccessManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 
 }
