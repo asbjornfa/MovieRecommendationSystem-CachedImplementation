@@ -26,14 +26,6 @@ public class User {
         this.name = name;
     }
 
-    /*public List<Rating> getRatings() {
-        return ratings;
-    }*/
-
-    /*public int getRatingsSize(){
-        return ratings.size();
-    }*/
-
     @Override
     public String toString() {
         return id +

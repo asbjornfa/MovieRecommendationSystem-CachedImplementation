@@ -23,21 +23,14 @@ public class LogInController implements Initializable {
     public Button btnLogin;
     public Button btnCreate;
     @FXML
-    private PasswordField enterPassword;
-    @FXML
     private TextField enterEmail;
     private AppModel model;
-    @FXML
-    private ImageView logoImage;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         model = new AppModel();
     }
 
-
-    public void signUp(ActionEvent actionEvent) {
-        System.out.println("Sign-Up");
-    }
 
     public void handleLogIn(ActionEvent actionEvent) {
         model.loadUsers();
@@ -50,17 +43,15 @@ public class LogInController implements Initializable {
                     closeLogInView.close();
                 });
 
-
+                String username = enterEmail.getText();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/MainWindow.fxml"));
                 Parent root = loader.load();
+                MainWindowController mainWindowController = loader.getController();
+                mainWindowController.displayName(username);
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
                 stage.setTitle("Movie Recommendation System 0.01 Beta");
                 stage.show();
-                //AppController controller = loader.getController();
-
-                //controller.setModel(model);
-
 
             } catch (IOException e) {
                 e.printStackTrace();

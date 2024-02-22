@@ -22,7 +22,6 @@ public class SearchViewController implements Initializable {
     @FXML
     private TilePane searchTilePane;
 
-    private TMDBConnector tmdbConnector;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

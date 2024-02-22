@@ -8,11 +8,6 @@ public class LogicManager {
 
     DataAccessManager dataMgr = new DataAccessManager();
 
-    public void reloadAllDataFromStorage(){
-
-        dataMgr.updateCacheFromDisk();
-    }
-
     public Collection<User> getAllUsers() {
         return dataMgr.getAllUsers().values();
     }

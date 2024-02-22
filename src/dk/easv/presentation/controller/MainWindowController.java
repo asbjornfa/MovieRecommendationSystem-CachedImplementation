@@ -29,28 +29,7 @@ public class MainWindowController implements Initializable {
     private BorderPane MainBorderPane;
 
     @FXML
-    private Label lblHome;
-
-    @FXML
-    private Label lblMovieCollection;
-
-    @FXML
-    private Label lblMovies;
-
-    @FXML
-    private Label lblMyList;
-
-    @FXML
-    private Label lblSearch;
-
-    @FXML
-    private Label lblTVShows;
-
-    @FXML
     private Label lblUserName;
-
-    @FXML
-    private Circle profileImage;
 
     @FXML
     private GridPane movieGrid;
@@ -87,6 +66,10 @@ public class MainWindowController implements Initializable {
     } catch (IOException | JSONException | URISyntaxException | InterruptedException e) {
         throw new RuntimeException(e);
     }
+    }
+
+    public void displayName(String username) {
+        lblUserName.setText(username);
     }
 
     @FXML

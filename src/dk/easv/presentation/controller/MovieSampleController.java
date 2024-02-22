@@ -28,8 +28,5 @@ public class MovieSampleController {
         lblMovieName.setText(tmdbMovie.getOriginal_title());
     }
 
-    public void setPlaceholder(){
-        moviePoster.setImage(new Image("Images/questionmark.png"));
-    }
 }
 
