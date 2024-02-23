@@ -63,7 +63,6 @@ public class ProfileSelectorController {
 
 
     public void handleSignout(ActionEvent event) throws IOException {
-        System.out.println("Virker");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/LogIn.fxml"));
         Parent root = loader.load();
         Stage stage = new Stage();

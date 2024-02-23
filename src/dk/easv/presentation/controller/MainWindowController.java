@@ -89,7 +89,6 @@ public class MainWindowController implements Initializable {
     private void handleClickMovie(MouseEvent mouseEvent) throws IOException {
         AnchorPane moviesView = FXMLLoader.load(getClass().getResource("/View/MoviesView.fxml"));
         MainBorderPane.setCenter(moviesView);
-        System.out.println("working");
     }
 
     @FXML

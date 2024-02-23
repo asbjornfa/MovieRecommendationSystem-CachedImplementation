@@ -46,7 +46,7 @@ public class ProfileWindowController {
 
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
-        stage.setTitle("Movie Recommendation System 0.01 Beta");
+        stage.setTitle("Movie Collection");
         stage.show();
 
         Platform.runLater(() -> {
@@ -65,7 +65,7 @@ public class ProfileWindowController {
 
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
-        stage.setTitle("Movie Recommendation System 0.01 Beta");
+        stage.setTitle("Movie Collection");
         stage.show();
 
         Platform.runLater(() -> {
