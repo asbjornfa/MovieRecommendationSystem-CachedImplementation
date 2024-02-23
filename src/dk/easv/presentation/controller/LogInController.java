@@ -43,11 +43,19 @@ public class LogInController implements Initializable {
                     closeLogInView.close();
                 });
 
-                String username = enterEmail.getText();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/MainWindow.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/ProfileWindow.fxml"));
                 Parent root = loader.load();
-                MainWindowController mainWindowController = loader.getController();
-                mainWindowController.displayName(username);
+
+                ProfileWindowController profileWindowController = loader.getController();
+                profileWindowController.setUsername(enterEmail.getText());
+                profileWindowController.setProfile1Name();
+
+                FXMLLoader selectorLoader = new FXMLLoader(getClass().getResource("/View/ProfileSelector.fxml"));
+                Parent selectorRoot = selectorLoader.load();
+
+                ProfileSelectorController profileSelectorController = selectorLoader.getController();
+                profileSelectorController.setUsername(enterEmail.getText());
+
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
                 stage.setTitle("Movie Recommendation System 0.01 Beta");

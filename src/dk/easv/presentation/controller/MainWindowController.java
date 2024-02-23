@@ -3,11 +3,13 @@ package dk.easv.presentation.controller;
 
 import dk.easv.dataaccess.TMDBConnector;
 import dk.easv.entities.TMDBMovie;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -26,7 +28,7 @@ import java.util.ResourceBundle;
 public class MainWindowController implements Initializable {
 
     @FXML
-    private BorderPane MainBorderPane;
+    public BorderPane MainBorderPane;
 
     @FXML
     private Label lblUserName;
@@ -35,6 +37,17 @@ public class MainWindowController implements Initializable {
     private GridPane movieGrid;
 
     private Node originalCenter;
+
+    private String username;
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    private String getUsername() {
+        return username;
+    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -88,6 +101,28 @@ public class MainWindowController implements Initializable {
     private void handleClickSearch(MouseEvent mouseEvent) throws IOException {
         AnchorPane searchView = FXMLLoader.load(getClass().getResource("/View/SearchView.fxml"));
         MainBorderPane.setCenter(searchView);
+    }
+
+    public void setLblUserNameP2() {
+        lblUserName.setText("Nikolai");
+    }
+
+    @FXML
+    private void handleChangeProfile(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/ProfileSelector.fxml"));
+            Parent root = loader.load();
+
+            ProfileSelectorController profileSelectorController = loader.getController();
+            profileSelectorController.setMainWindowController(this);
+            profileSelectorController.setProf1SelectName(getUsername());
+            profileSelectorController.setUsername(username);
+
+            MainBorderPane.setCenter(root);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 

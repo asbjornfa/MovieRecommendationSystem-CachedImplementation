@@ -1,0 +1,15 @@
+#anchorPanePayment, #borderPanePayment{
+    -fx-background-color:  #2c2c2c;
+
+}
+#nameOnCard, #cvc, #cardNumber, #expirationDate {
+    -fx-background-radius: 50;
+    -fx-background-color:  #dbdbdb;
+}
+#basicPlan, #premiumPlan, #luxuryPlan{
+    -fx-background-color:  #2cab93;
+}
+#clickBackBtn, #clickFinishBtn{
+    -fx-background-radius: 50;
+    -fx-background-color: #2cab93;
+}
